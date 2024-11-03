@@ -15,25 +15,25 @@
             <img src="images/menu-icon.png" alt="menu">
         </div>
 
-        <div class="nav-links-div">
+        <div class="nav-links-div" style="scroll-behavior: smooth;">
         <ul class="nav-links">
-            <li class="link-inicio" ><a href="#">Inicio</a></li>
-            <li class="link" ><a href="#">Sobre mi</a></li>
-            <li class="link" ><a href="#">Proyectos</a></li>
-            <li class="link-contacto" ><a href="#">Contacto</a></li>
+            <li class="link-inicio" ><a href="#inicio">Inicio</a></li>
+            <li class="link" ><a href="#sobre-mi">Sobre mi</a></li>
+            <li class="link" ><a href="#proyectos">Proyectos</a></li>
+            <li class="link-contacto" ><a href="https://wa.me/+573187427289">Contacto</a></li>
         </ul>
         </div>
 
         <a href="https://wa.me/+573187427289" target="_blank"><button class="btn">Contactar</button></a>
     </nav>
 
-    <header class="container">
+    <header class="container" id="inicio">
         <div class="content">
             <span class="blur"></span>
             <span class="blur"></span>
             <h4></h4>
             <h1>Hola, soy <span>  Estiguar</span> : <h1 class="typing-text"></h1></h1>
-            <p>
+            <p id="sobre-mi">
                 Tengo 16 años y me interesó la programación desde que tenia 13. Empecé con los videojuegos, recreando un Pac-Man sencillo. Luego seguí con el desarrollo web aprendiendo las tecnologias necesarias, y desde entonces he creado varios proyectos.
             </p>
             <a href="images/CV/Currículum2024.pdf" download="Currículum2024.pdf"><button class="btn">Descargar CV</button></a>
@@ -105,11 +105,20 @@
                 <p>JAVA</p>
             </div>
         </div>
+
+        <hr>
+
+        <div class="content-skills">
+            <div class="git">
+                <i class="fa-brands"><img src="images/git.png" alt="git"></i>
+                <p>GIT</p>
+            </div>
+        </div>
     </section>
 
     <hr style="margin: 220px 200px 80px 200px;">
 
-    <section class="projects">
+    <section class="projects" id="proyectos">
         <div class="title-projects">
             <h1>Proyectos</h1>
         </div>
@@ -132,10 +141,23 @@
                 </div>
 
                 <p>Plataforma de foros de discusiones en linea. Con 22 tablones y tres columnas diferentes, que abarcan desde el entretenimiento, hasta el aprendizaje y los videojuegos. Cuenta con sistema de gestor de usuarios.</p>
-                <div class="socials" style="padding: 40px 0;">
+                <div class="socials">
                     <a href="https://estiguar15.pythonanywhere.com" target="_blank"><i class="fa-brands fa-red"></i>🌐</a>
                 </div>
             </div>
+
+
+            <div class="chatbot">
+                <div class="socialis-img">
+                    <h1 style="font-size: 4rem;">🤖</h1>
+                </div>
+
+                <p>ChatBot especializado en Politica o Analista Politico. - Proyecto con API de OpenAI.</p>
+                <div class="socials" style="padding: 40px 0;">
+                    <a href="https://github.com/jhon-henao13/chatbot-politica" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
         </div>
         
     </section>

@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,500;1,500&display=swap');
 
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     border: none;
+    scroll-behavior: smooth !important;
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
 
 img {
@@ -24,6 +27,8 @@ a {
 body {
     font-family: 'Roboto Condensed', sans-serif;
     background-color: #001E1A;
+    scrollbar-color: #10D589 #001E1A !important;
+    overflow-y: scroll;
 
 }
 
@@ -251,7 +256,6 @@ header .image img:hover {
     content: "";
     background-color: #001E1A;
     position: absolute;
-    width: calc(100% + 8px);
     height: 100%;
     border-left: 3px solid black;
     right: -8;
@@ -381,7 +385,7 @@ header .image img:hover {
 
 
 
-.html, .css, .python, .javascript, .mysql, .php, .linux, .flask, .java {
+.html, .css, .python, .javascript, .mysql, .php, .linux, .flask, .java, .git {
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -450,6 +454,13 @@ header .image img:hover {
     cursor: pointer;
 }
 
+.git:hover {
+    transform: scale(1.2) translateY(-0.3px);
+    z-index: 100;
+    cursor: pointer;
+}
+
+
 hr {
     color: #10D589;
     border: revert;
@@ -478,7 +489,7 @@ hr {
     transition: 0.5s ease;
 }
 
-.socialize, .socialis {
+.socialize, .socialis, .chatbot {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -496,7 +507,7 @@ hr {
 }
 
 
-.socialize p, .socialis p {
+.socialize p, .socialis p, .chatbot p {
     font-size: 25px;
     font-weight: 700;
     padding: 5px 150px;
@@ -526,7 +537,12 @@ hr {
 
 .socialis {
     margin-top: 80px;
-    margin-bottom: 100px;
+    margin-bottom: 130px;
+}
+
+.chatbot {
+    margin-bottom: 110px;
+    margin-top: 30px;
 }
 
 
