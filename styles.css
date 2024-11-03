@@ -556,7 +556,7 @@ hr {
         font-size: 2.6rem;
     }
 
-    .socialize, .socialis {
+    .socialize, .socialis, .chatbot {
         margin: 35px 150px;
     }
 }
@@ -567,11 +567,11 @@ hr {
         font-size: 2.2rem
     }
 
-    .socialize, .socialis {
+    .socialize, .socialis, .chatbot {
         margin: 35px 50px;
     }
 
-    .socialis {
+    .chatbot {
         margin-bottom: 170px;
     }
 
@@ -581,7 +581,7 @@ hr {
 }
 
 @media (width < 754px) {
-    .socialize p, .socialis p {
+    .socialize p, .socialis p, .chatbot p {
         padding: 5px 60px;
     }
 
@@ -720,7 +720,7 @@ hr {
         height: 10pc;
     }
 
-    .socialize, .socialis {
+    .socialize, .socialis, .chatbot {
         margin: 35px 12px;
     }
 
