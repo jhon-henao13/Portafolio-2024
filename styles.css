@@ -55,6 +55,44 @@ nav {
     transition: transform 0.3s;
 }
 
+
+.nav-links a i {
+    margin-right: 8px;
+    color: #10D589;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover i {
+    transform: scale(1.3);
+    color: #0a7049;
+}
+
+
+#tsparticles {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #001E1A; /* fondo oscuro */
+}
+
+
+header .content h1,
+header .content span {
+    text-shadow: 0 0 10px rgba(16, 213, 137, 0.5);
+    transition: text-shadow 0.4s ease;
+}
+
+header .content h1:hover,
+header .content span:hover {
+    text-shadow: 0 0 20px #10D589, 0 0 30px #10D589;
+}
+
+
+
+
 .link a, .link-inicio a, .link-contacto a {
     position: relative;
     padding-bottom: 0.75rem;
@@ -131,15 +169,145 @@ nav {
 }
 
 .btn {
-    padding: 1rem 2rem;
+    /* padding: 1rem 2rem;
     font-size: 1rem;
     color: #001E1A;
     font-weight: bolder;
     background-color: #10D589;
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease; */
+
+
+    position: relative;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #001E1A;
+    background-color: #10D589;
+    font-weight: bolder;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
     transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(16, 213, 137, 0.4);
 }
+
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle, #10D589 0%, transparent 70%);
+    transform: scale(0);
+    opacity: 0.5;
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+.btn:hover::before {
+    transform: scale(2.5);
+    opacity: 0;
+}
+
+
+
+.floating-card {
+  position: absolute;
+  padding: 1rem 1.4rem;
+  font-weight: bold;
+  color: #001E1A;
+  background-color: #10D589;
+  border-radius: 20px;
+  font-size: 1rem;
+  box-shadow: 0 0 20px #10D589;
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Posiciones fijas sobre la imagen */
+.autodidacta-card {
+  top: 10%;
+  left: 68%;
+}
+
+.curioso-card {
+  bottom: 15%;
+  left: 70%;
+}
+
+.creativo-card {
+  top: 45%;
+  right: 75%;
+}
+
+/* Animación de flotación vertical */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Efecto hover interactivo */
+.floating-card:hover {
+  transform: scale(1.2) rotateY(15deg) translateY(-5px);
+  box-shadow: 0 0 30px #0afc9a, 0 0 40px #0afc9a;
+  background-color: #0afc9a;
+}
+
+
+
+
+
+header .content, header .image {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+header .image {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+header .image::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(16, 213, 137, 0.3) 20%, transparent 70%);
+    animation: pulse 3s infinite ease-in-out;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+
+
+
 
 .btn:hover {
     background-color: #0a7049;
@@ -157,7 +325,7 @@ nav button:hover {
 .container {
     max-width: 1200px;
     margin: auto;
-    padding: 5rem 2rem;
+    padding: 3rem 2rem;
 }
 
 .blur {
@@ -193,7 +361,7 @@ header .content h1 span {
 header .content p {
     margin-bottom: 2rem;
     color: #ccc;
-    font-size: 20px;
+    font-size: 23px;
 }
 
 header .image {
@@ -290,6 +458,8 @@ header .image img:hover {
         content: "Script Writter";
     }
 }
+
+/* Skills Section */
 
 .skills {
     color: #001E1A;
@@ -549,6 +719,37 @@ hr {
 .toggle-menu {
     display: none;
 }
+
+
+
+/* Para todo el scrollbar de la página */
+::-webkit-scrollbar {
+  width: 26px; /* Ancho del scrollbar vertical */
+  height: 10px; /* Alto del scrollbar horizontal */
+}
+
+/* El fondo del scrollbar */
+::-webkit-scrollbar-track {
+  background: #1e2023; /* Color de fondo del track (pista) */
+  border-radius: 10px; /* Bordes redondeados del track */
+}
+
+/* El "pulgar" o la barra que se mueve */
+::-webkit-scrollbar-thumb {
+  background: #10D589; /* Color de la barra (thumb) */
+  border-radius: 10px; /* Bordes redondeados de la barra */
+}
+
+/* Al pasar el mouse sobre la barra */
+::-webkit-scrollbar-thumb:hover {
+  background: #0da56b; /* Color de la barra al pasar el mouse */
+  transition: 0.3s ease;
+  width: 25px;
+}
+
+
+
+
 
 
 @media (width < 1253px) {

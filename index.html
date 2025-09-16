@@ -6,41 +6,70 @@
     <title>Portafolio | Jhon Estiguar</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/ac492bb479.js" crossorigin="anonymous"></script>
+
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
     
-    <nav> 
+    <nav data-aos="fade-down">
+
 
         <div id="toggle-menu" class="toggle-menu">
             <img src="images/menu-icon.png" alt="menu">
         </div>
 
         <div class="nav-links-div" style="scroll-behavior: smooth;">
+
         <ul class="nav-links">
-            <li class="link-inicio" ><a href="#inicio">Inicio</a></li>
-            <li class="link" ><a href="#sobre-mi">Sobre mi</a></li>
-            <li class="link" ><a href="#proyectos">Proyectos</a></li>
-            <li class="link-contacto" ><a href="https://wa.me/+573187427289">Contacto</a></li>
+            <li class="link-inicio">
+                <a href="#inicio"><i class="fa-solid fa-house"></i> Inicio</a>
+            </li>
+            <li class="link">
+                <a href="#sobre-mi"><i class="fa-solid fa-user"></i> Sobre mí</a>
+            </li>
+            <li class="link">
+                <a href="#proyectos"><i class="fa-solid fa-code"></i> Proyectos</a>
+            </li>
+            <li class="link-contacto">
+                <a href="https://wa.me/+573185168709" target="_blank">
+                    <i class="fa-solid fa-paper-plane"></i> Contacto
+                </a>
+            </li>
         </ul>
+
+
+
         </div>
 
         <a href="https://wa.me/+573185168709" target="_blank"><button class="btn">Contactar</button></a>
     </nav>
 
-    <header class="container" id="inicio">
+    <div id="tsparticles"></div>
+
+
+    <header class="container" id="inicio" data-aos="fade-up">
         <div class="content">
             <span class="blur"></span>
             <span class="blur"></span>
             <h4></h4>
             <h1>Hola, soy <span>  Estiguar</span> : <h1 class="typing-text"></h1></h1>
             <p id="sobre-mi">
-                Tengo 16 años y me interesó la programación desde que tenia 13. Empecé con los videojuegos, recreando un Pac-Man sencillo. Luego seguí con el desarrollo web aprendiendo las tecnologias necesarias, y desde entonces he creado varios proyectos.
+                Soy un desarrollador autodidacta de 16 años con una pasión genuina por la tecnología. Desde los 12 años he aprendido por mi cuenta, comenzando con la creación de videojuegos simples y evolucionando hacia el desarrollo web completo. Me destaco por mi disciplina, iniciativa y enfoque en aprender de forma constante. Cada proyecto que realizo refleja mi compromiso con la mejora continua y mi interés en aportar soluciones creativas y funcionales.
             </p>
             <a href="images/CV/Currículum2024.pdf" download="Currículum2024.pdf"><button class="btn">Descargar CV</button></a>
         </div>
 
         <div class="image">
-            <img src="images/logo.jpg" alt="me">
+
+            <div class="floating-card autodidacta-card" data-aos="zoom-in" data-aos-delay="100">Autodidacta</div>
+            <div class="floating-card curioso-card" data-aos="zoom-in" data-aos-delay="300">Curioso</div>
+            <div class="floating-card creativo-card" data-aos="zoom-in" data-aos-delay="500">Colaborativo</div>
+
+
+
+            <img src="images/logo.jpg" alt="me" data-aos="zoom-in">
+
         </div>
 
             <div class="socials">
@@ -51,13 +80,15 @@
         </div>
     </header>
 
-    <section class="skills">
+    <section class="skills" data-aos="fade-up">
+
 
         <div class="title-skills">
             <h1>Tecnologias</h1>
         </div>
 
-        <div class="content-skills">
+        <div class="content-skills" data-aos="fade-up" data-aos-delay="200">
+
             <div class="html">
                 <i class="fa-brands"><img src="images/html.png" alt="html"></i>
                 <p>HTML</p>
@@ -74,7 +105,8 @@
 
         <hr>
 
-        <div class="content-skills">
+        <div class="content-skills" data-aos="fade-up" data-aos-delay="200">
+
             <div class="javascript">
                 <i class="fa-brands"><img src="images/javascript.png" alt="js"></i>
                 <p>JAVASCRIPT</p>
@@ -91,7 +123,8 @@
 
         <hr>
 
-        <div class="content-skills">
+        <div class="content-skills" data-aos="fade-up" data-aos-delay="200">
+
             <div class="linux">
                 <i class="fa-brands"><img src="images/linux.png" alt="linux"></i>
                 <p>LINUX</p>
@@ -108,7 +141,8 @@
 
         <hr>
 
-        <div class="content-skills">
+        <div class="content-skills" data-aos="fade-up" data-aos-delay="200">
+
             <div class="git">
                 <i class="fa-brands"><img src="images/git.png" alt="git"></i>
                 <p>GIT</p>
@@ -119,35 +153,37 @@
     <hr style="margin: 220px 200px 80px 200px;">
 
     <section class="projects" id="proyectos">
-        <div class="title-projects">
+        <div class="title-projects" data-aos="fade-up">
             <h1>Proyectos</h1>
         </div>
 
         <div class="content-projects">
-            <div class="socialize">
+            <div class="socialize" data-aos="fade-right">
                 <div class="socialize-img">
                     <img src="images/vector.png" alt="socialize">
                 </div>
                 
                 <p>Red social desde cero creada con PHP y MySQL. Con los sistemas de publicaciones, sistema de likes, comentarios, sistema de notificaciones, mensajería privada, sistema de seguidores, etc.</p>
-                <div class="socials" style="padding: 40px 0;">
+                <div class="socials" style="padding: 40px 0;" data-aos="fade-left">
+                
                     <a href="https://github.com/jhon-henao13/Socialize" target="_blank"><i class="fa-brands fa-github"></i></a>
                 </div>
             </div>
 
-            <div class="socialis">
+            <div class="socialis" data-aos="fade-left">
+
                 <div class="socialis-img">
                     <img src="images/logo.png" alt="Socialis">
                 </div>
 
                 <p>Plataforma de foros de discusiones en linea. Con 22 tablones y tres columnas diferentes, que abarcan desde el entretenimiento, hasta el aprendizaje y los videojuegos. Cuenta con sistema de gestor de usuarios.</p>
                 <div class="socials">
-                    <a href="https://estiguar15.pythonanywhere.com" target="_blank"><i class="fa-brands fa-red"></i>🌐</a>
+                    <a href="https://estiguar15.pythonanywhere.com" target="_blank"><i class="fa-solid fa-globe"></i></a>
                 </div>
             </div>
 
 
-            <div class="chatbot">
+            <div class="chatbot" data-aos="fade-right">
                 <div class="socialis-img">
                     <h1 style="font-size: 4rem;">🤖</h1>
                 </div>
@@ -163,6 +199,23 @@
     </section>
 
 
+    <!-- tsParticles CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // duración de las animaciones
+            once: false      // se anima cada vez que se hace scroll en false
+        });
+    </script>
+
+
+
     <script src="script.js"></script>
+
+    
+
+
 </body>
 </html>
