@@ -80,77 +80,122 @@
         </div>
     </header>
 
-    <section class="skills" data-aos="fade-up">
+    <section class="skills" id="skills" data-aos="fade-up">
+      <div class="skills-title">
+        <h2>Tecnologías & Herramientas</h2>
+        <p class="subtitle">Stack con el que trabajo y tecnologías que domino.</p>
+      </div>
 
+      <div class="skills-grid">
 
-        <div class="title-skills">
-            <h1>Tecnologias</h1>
+        <!-- FRONTEND -->
+        <div class="skill-card" data-tooltip="Lenguaje de marcado">
+          <img src="images/html.png" alt="HTML">
+          <p>HTML5</p>
+        </div>
+        <div class="skill-card" data-tooltip="Estilos modernos y responsivos">
+          <img src="images/css.png" alt="CSS">
+          <p>CSS3</p>
+        </div>
+        <div class="skill-card" data-tooltip="Interactividad en cliente">
+          <img src="images/javascript.png" alt="JS">
+          <p>JavaScript</p>
+        </div>
+        <div class="skill-card" data-tooltip="Librería frontend">
+          <img src="images/react.png" alt="React">
+          <p>React</p>
+        </div>
+        <div class="skill-card" data-tooltip="Framework progresivo para interfaces">
+          <img src="images/vue.png" alt="Vue.js">
+          <p>Vue.js</p>
+        </div>
+        <div class="skill-card" data-tooltip="Gráficas y visualizaciones">
+          <img src="images/chartjs.png" alt="Chart.js">
+          <p>Chart.js</p>
         </div>
 
-        <div class="content-skills" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="html">
-                <i class="fa-brands"><img src="images/html.png" alt="html"></i>
-                <p>HTML</p>
-            </div>
-            <div class="css">
-                <i class="fa-brands"><img src="images/css.png" alt="css"></i>
-                <p>CSS</p>
-            </div>
-            <div class="python">
-                <i class="fa-brands"><img src="images/python.png" alt="py"></i>
-                <p>PYTHON</p>
-            </div>
+        <!-- BACKEND -->
+        <div class="skill-card" data-tooltip="Lenguaje multipropósito">
+          <img src="images/python.png" alt="Python">
+          <p>Python</p>
+        </div>
+        <div class="skill-card" data-tooltip="Framework minimalista para APIs">
+          <img src="images/fastapi.png" alt="FastAPI">
+          <p>FastAPI</p>
+        </div>
+        <div class="skill-card" data-tooltip="Microframework web para Python">
+          <img src="images/flask.png" alt="Flask">
+          <p>Flask</p>
+        </div>
+        <div class="skill-card" data-tooltip="Lenguaje backend">
+          <img src="images/php.png" alt="PHP">
+          <p>PHP</p>
+        </div>
+        <div class="skill-card" data-tooltip="Comunicación en tiempo real">
+          <img src="images/socketio.png" alt="Socket.IO">
+          <p>Socket.IO</p>
         </div>
 
-        <hr>
-
-        <div class="content-skills" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="javascript">
-                <i class="fa-brands"><img src="images/javascript.png" alt="js"></i>
-                <p>JAVASCRIPT</p>
-            </div>
-            <div class="mysql">
-                <i class="fa-brands"><img src="images/mysql.png" alt="mysql"></i>
-                <p>MYSQL</p>
-            </div>
-            <div class="php">
-                <i class="fa-brands"><img src="images/php.png" alt="php"></i>
-                <p>PHP</p>
-            </div>
+        <!-- BASE DE DATOS -->
+        <div class="skill-card" data-tooltip="Base de datos relacional">
+          <img src="images/mysql.png" alt="MySQL">
+          <p>MySQL</p>
+        </div>
+        <div class="skill-card" data-tooltip="Mensajería para IoT">
+          <img src="images/mqtt.png" alt="MQTT">
+          <p>MQTT</p>
         </div>
 
-        <hr>
-
-        <div class="content-skills" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="linux">
-                <i class="fa-brands"><img src="images/linux.png" alt="linux"></i>
-                <p>LINUX</p>
-            </div>
-            <div class="flask">
-                <i class="fa-brands"><img src="images/flask.png" alt="flask"></i>
-                <p>FLASK</p>
-            </div>
-            <div class="java">
-                <i class="fa-brands"><img src="images/java.png" alt="java"></i>
-                <p>JAVA</p>
-            </div>
+        <!-- DEPLOY / DEVOPS -->
+        <div class="skill-card" data-tooltip="Despliegue rápido de proyectos">
+          <img src="images/vercel.png" alt="Vercel">
+          <p>Vercel</p>
+        </div>
+        <div class="skill-card" data-tooltip="Contenedores para entornos portables">
+          <img src="images/docker.png" alt="Docker">
+          <p>Docker</p>
+        </div>
+        <div class="skill-card" data-tooltip="Gestión de entornos Python">
+          <img src="images/anaconda.png" alt="Anaconda">
+          <p>Anaconda</p>
         </div>
 
-        <hr>
-
-        <div class="content-skills" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="git">
-                <i class="fa-brands"><img src="images/git.png" alt="git"></i>
-                <p>GIT</p>
-            </div>
+        <!-- OTROS / TOOLS -->
+        <div class="skill-card" data-tooltip="Control de versiones profesional">
+          <img src="images/git.png" alt="Git">
+          <p>Git</p>
         </div>
+        <div class="skill-card" data-tooltip="Gestión de paquetes JavaScript">
+          <img src="images/npm.png" alt="NPM">
+          <p>NPM</p>
+        </div>
+        <div class="skill-card" data-tooltip="Servidor web Apache">
+          <img src="images/apache.png" alt="Apache">
+          <p>Apache</p>
+        </div>
+        <div class="skill-card" data-tooltip="Scripting en terminal Linux">
+          <img src="images/bash.png" alt="Bash">
+          <p>Bash</p>
+        </div>
+        <div class="skill-card" data-tooltip="CMS para gestión de contenidos">
+          <img src="images/wordpress.png" alt="WordPress">
+          <p>WordPress</p>
+        </div>
+        <div class="skill-card" data-tooltip="Sistema operativo para pentesting">
+          <img src="images/kali.png" alt="Kali Linux">
+          <p>Kali Linux</p>
+        </div>
+        <div class="skill-card" data-tooltip="Diseño gráfico rápido en línea">
+          <img src="images/canva.png" alt="Canva">
+          <p>Canva</p>
+        </div>
+
+      </div>
     </section>
 
-    <hr style="margin: 220px 200px 80px 200px;">
+
+
+    <hr style="margin: 50px 200px 5px 200px;">
 
     <section class="projects" id="proyectos">
         <div class="title-projects" data-aos="fade-up">

@@ -462,173 +462,91 @@ header .image img:hover {
 /* Skills Section */
 
 .skills {
-    color: #001E1A;
-    margin: 60px 150px;
-    transition: 0.5s ease;
-    gap: 30px;
-    
+  padding: 80px 10%;
+  background-color: transparent;
+  color: #001E1A;
 }
 
-
-
-.title-skills {
-    background: #001E1A;
-    cursor: pointer;
-    border: none;
-    padding: 16px 32px;
-    margin: 80px 80px;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    position: relative;
-    border-radius: 42px;
-
+.skills-title {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-
-.title-skills::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        45deg, 
-        #001E1A, #0a7049, #10D589, lime,
-        #001E1A, #0a7049, #10D589, lime
-    );
-    background-size: 800%;
-    border-radius: 10px;
-    filter: blur(8px);
-    animation: glowing 20s linear infinite;
+.skills-title h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: white;
 }
 
-@keyframes glowing {
-    0% {
-        background-position: 0 0;
-    }
-
-    50% {
-        background-position: 400% 0;
-    }
-
-    100% {
-        background-position: 0 0;
-    }
+.skills-title .subtitle {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-top: 8px;
 }
 
-
-
-.title-skills h1 {
-    text-align: center;
-    padding: 50px 0;
-    text-shadow: 9px 9px 13px green;
-    color: #fff;
-    filter: drop-shadow(
-        0 0 40px #10D589);
-    font-size: 2.6rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    border-radius: 40px;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 60px;
+  justify-items: center;
 }
 
-.content-skills {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 50px 20px;
-    
+.skill-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  padding: 20px 40px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  cursor: default;
 }
 
-
-.content-skills p {
-    text-align: center;
-    font-weight: 900;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.skill-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  transition: transform 0.4s ease;
 }
 
-.content-skills img {
-    width: 100%;
-    padding: 30px;
+.skill-card p {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #222;
 }
 
-
-
-.html, .css, .python, .javascript, .mysql, .php, .linux, .flask, .java, .git {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    height: 190px;
-    width: 150px;
-    border-radius: 50px;
-    transition: 0.4s ease;
-    
-    filter: drop-shadow(
-        0 0 20px #10D589);
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
-
-.html:hover {
-    transform: scale(1.2) translateY(-0.3px);
-    z-index: 100;
-    cursor: pointer;
+.skill-card:hover img {
+  transform: scale(1.1);
 }
 
-.css:hover {
-    transform: scale(1.2) translateY(-0.3px);
-    z-index: 100;
-    cursor: pointer;
+/* Tooltip Custom */
+.skill-card::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #10D589;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
 }
 
-.python:hover {
-    transform: scale(1.2) translateY(-0.3px);
-    z-index: 100;
-    cursor: pointer;
+.skill-card:hover::after {
+  opacity: 1;
 }
 
-.javascript:hover {
-    transform: scale(1.2) translateY(-0.3px);
-    z-index: 100;
-    cursor: pointer;
-}
-
-
-.mysql:hover {
-    transform: scale(1.2) translateY(-0.3px);
-    z-index: 100;
-    cursor: pointer;
-}
-
-.php:hover {
-    transform: scale(1.2) translateY(-0.3px);
-    z-index: 100;
-    cursor: pointer;
-}
-
-.linux:hover {
-    transform: scale(1.2) translateY(-0.3px);
-    z-index: 100;
-    cursor: pointer;
-}
-
-.flask:hover {
-    transform: scale(1.2) translateY(-0.3px);
-    z-index: 100;
-    cursor: pointer;
-}
-
-.java:hover {
-    transform: scale(1.2) translateY(-0.3px);
-    z-index: 100;
-    cursor: pointer;
-}
-
-.git:hover {
-    transform: scale(1.2) translateY(-0.3px);
-    z-index: 100;
-    cursor: pointer;
-}
 
 
 hr {
