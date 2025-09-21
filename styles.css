@@ -325,7 +325,7 @@ nav button:hover {
 .container {
     max-width: 1200px;
     margin: auto;
-    padding: 3rem 2rem;
+    padding: 1rem 2rem;
 }
 
 .blur {
@@ -641,7 +641,7 @@ hr {
 
 .projects {
   background-color: var(--bg);
-  padding: 80px 0;
+  padding: 0;
 }
 
 .container {
@@ -657,6 +657,83 @@ hr {
   position: relative;
   margin-bottom: 60px;
 }
+
+
+
+.enhanced-projects-header {
+  text-align: center;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.glow-title {
+  font-size: 3rem;
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(16, 213, 137, 0.6), 0 0 16px rgba(16, 213, 137, 0.3);
+  animation: glow-fade 2.5s ease-in-out infinite alternate;
+  position: relative;
+  display: inline-block;
+}
+
+.glow-title i {
+  margin-right: 10px;
+}
+
+@keyframes glow-fade {
+  from {
+    text-shadow: 0 0 8px rgba(16, 213, 137, 0.4), 0 0 14px rgba(16, 213, 137, 0.2);
+  }
+  to {
+    text-shadow: 0 0 14px rgba(16, 213, 137, 0.8), 0 0 30px rgba(16, 213, 137, 0.4);
+  }
+}
+
+.subtitle {
+  color: var(--text-light);
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+.subtitle span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* LÍNEAS ANIMADAS */
+.animated-line {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  animation: move-glow 3s infinite linear;
+  opacity: 0.3;
+}
+
+@keyframes move-glow {
+  0% {
+    background-position: -500px;
+  }
+  100% {
+    background-position: 500px;
+  }
+}
+
+.top-line {
+  margin-bottom: 10px;
+}
+.bottom-line {
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
 
 .projects-grid {
   display: grid;
@@ -1045,6 +1122,150 @@ hr {
 }
 
 
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 20px;
+  justify-content: center;
+}
+
+.tech-tags span {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--accent);
+  font-size: 1rem;
+  padding: 5px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(16, 213, 137, 0.3);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.tech-tags span:hover {
+  background-color: var(--accent);
+  color: var(--bg);
+  transform: scale(1.05);
+}
+
+
+.tech-tags-syslity span {
+  color: #20bedc;
+  border-color: #20bedc55;
+}
+
+.tech-tags-syslity span:hover {
+  background: #20bedc;
+  color: #001E1A;
+}
+
+.tech-tags-pionix span {
+  color: #773ae7;
+  border-color: #773ae755;
+}
+
+.tech-tags-pionix span:hover {
+  background: #773ae7;
+  color: #001E1A;
+}
+
+
+
+.footer {
+  background-color: #001E1A;
+  color: var(--text-light);
+  padding: 60px 0 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 40px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 30px;
+}
+
+.footer-left h2 {
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.footer-copy {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-right p {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: var(--text-light);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--accent);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    margin-bottom: 20px;
+  }
+
+  .social-icons a {
+    margin-right: 10px;
+  }
+}
+
+
+
+
 
 
 
@@ -1193,6 +1414,24 @@ hr {
         display: block;
         text-align: center;
     }
+
+    .projects-gallery {
+        display: flex !important;
+        gap: 40px;
+        flex-direction: column;
+    }
+
+    .card-overlay2 {
+        height: auto !important;
+    }
+
+    .card-overlay4 {
+        height: auto !important;
+    }
+
+    
+
+
 
     .content {
         padding-bottom: 60px
