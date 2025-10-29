@@ -443,7 +443,7 @@ header .image img:hover {
     }
 
     21%, 40% {
-        content: "Web developer";
+        content: "Backend developer";
     }
 
     41%, 60% {
@@ -455,7 +455,7 @@ header .image img:hover {
     }
 
     81%, 100% {
-        content: "Script Writter";
+        content: "Flutter Developer";
     }
 }
 
