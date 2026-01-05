@@ -8,6 +8,7 @@
     box-sizing: border-box;
     border: none;
     scroll-behavior: smooth !important;
+    font-family: "Feather Bold", "sans-serif";
 }
 
 html {
@@ -25,7 +26,7 @@ a {
 }
 
 body {
-    font-family: 'Roboto Condensed', sans-serif;
+    /* font-family: 'Roboto Condensed', sans-serif; */
     background-color: #001E1A;
     scrollbar-color: #10D589 #001E1A !important;
     overflow-y: scroll;
@@ -362,8 +363,10 @@ header .content h1 span {
 header .content p {
     margin-bottom: 2rem;
     color: #ccc;
-    font-size: 26px;
+    font-size: 22px;
     letter-spacing: 1px;
+    word-spacing: 5px;
+    line-height: 1.5
 }
 
 header .image {
