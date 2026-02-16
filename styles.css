@@ -11,9 +11,7 @@
     font-family: "Feather Bold", "sans-serif";
 }
 
-html {
-    scroll-behavior: smooth !important;
-}
+
 
 img {
     width: 100%;
@@ -25,15 +23,25 @@ a {
     text-decoration: none;
 }
 
-body {
-    /* font-family: 'Roboto Condensed', sans-serif; */
-    background-color: #001E1A;
-    scrollbar-color: #10D589 #001E1A !important;
-    overflow-y: scroll;
-
+html {
+    background-color: #001E1A; /* El color se queda aquí */
+    width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth !important;
 }
 
+body {
+    background-color: transparent !important; /* BODY TRANSPARENTE */
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
 nav {
+    position: relative;
+    z-index: 1000;
+
     max-width: 1200px;
     margin: auto;
     padding: 2rem 1rem;
@@ -71,13 +79,14 @@ nav {
 
 
 #tsparticles {
-    position: fixed;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
+    position: fixed !important;
     top: 0;
     left: 0;
-    background-color: #001E1A; /* fondo oscuro */
+    width: 100vw !important;
+    height: 100vh !important;
+    /* Un valor muy bajo para asegurar que esté detrás del fondo del body si es necesario */
+    z-index: -1 !important; 
+    pointer-events: none;
 }
 
 
@@ -325,9 +334,11 @@ nav button:hover {
 }
 
 .container {
+    width: 100%;
     max-width: 1200px;
-    margin: auto;
-    padding: 1rem 2rem;
+    margin: 0 auto;
+    padding: 1rem 5%; /* Padding porcentual para móviles */
+    box-sizing: border-box;
 }
 
 .blur {
@@ -634,10 +645,12 @@ header .image img:hover {
 
 
 hr {
-    color: #10D589;
-    border: revert;
-    margin: 0 200px;
-    opacity: 0.3;
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #10D589, transparent);
+    margin: 4rem auto;
+    width: 80%;
+    opacity: 0.4;
 }
 
 
@@ -657,7 +670,7 @@ hr {
 
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1250px;
   margin: auto;
 }
 
@@ -907,10 +920,8 @@ hr {
   }
 }
 
-.toggle-menu {
-    display: none;
-}
-
+.toggle-menu { position: relative; display: none; cursor: pointer; z-index: 1001; }
+.btn-nav { padding: 0.5rem 1.5rem; font-size: 0.9rem; }
 
 
 /* Para todo el scrollbar de la página */
@@ -1202,9 +1213,29 @@ hr {
     }
 
     .nav-links-div {
-        display: none;
-        transition: transform 0.3s;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Oculto por defecto */
+        width: 70%;
+        height: 100vh;
+        background: rgba(0, 30, 26, 0.95);
+        backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        border-left: 1px solid rgba(16, 213, 137, 0.2);
     }
+
+    .nav-links-div.show {
+        right: 0;
+    }
+
+    #close-menu { display: block !important; }
+
+    .nav-links-div ul li { margin: 0; }
 
     .nav-links {
         list-style: none;
@@ -1267,7 +1298,7 @@ hr {
 
 
     .link a{
-        color: #001E1A;
+        color: whitesmoke;
         
     }
 
@@ -1279,9 +1310,7 @@ hr {
         padding-bottom: 20px;
     }
 
-    .link-inicio a, .link-contacto a {
-        color: #001E1A;
-    }
+    
 
     .link-inicio a::after {
         background-color: #001E1A;
