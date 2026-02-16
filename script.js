@@ -1,8 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    const filters = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.skill-card');
+
+    filters.forEach(filter => {
+        filter.addEventListener('click', () => {
+            filters.forEach(btn => btn.classList.remove('active'));
+            filter.classList.add('active');
+
+            const category = filter.getAttribute('data-filter');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.classList.remove('hide');
+                    card.classList.add('show');
+                } else {
+                    card.classList.remove('show');
+                    card.classList.add('hide');
+                }
+            });
+        });
+    });
+
+
     
     const toggleMenuElement = document.getElementById("toggle-menu");
     const mainMenuElement = document.getElementById("nav-menu");
     const closeMenuElement = document.getElementById("close-menu");
+
+
 
     // Verificamos que los elementos existan para evitar errores en consola
     if (toggleMenuElement && mainMenuElement && closeMenuElement) {

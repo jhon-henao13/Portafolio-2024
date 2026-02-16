@@ -644,6 +644,57 @@ header .image img:hover {
 
 
 
+/* Contenedor de filtros */
+.skills-filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: rgba(16, 213, 137, 0.1);
+  border: 2px solid var(--aurora-color-1);
+  color: #fff; /* O el color de tu fuente principal */
+  padding: 10px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background: var(--aurora-color-1);
+  color: #001E1A;
+  box-shadow: 0 0 15px rgba(16, 213, 137, 0.4);
+}
+
+/* Animación para las cards al filtrar */
+.skill-card.hide {
+  display: none;
+}
+
+.skill-card.show {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ajuste al grid para que no salte bruscamente */
+.skills-grid {
+  min-height: 400px; /* Evita que el footer suba de golpe al filtrar */
+  transition: all 0.5s ease;
+}
+
+
+
+
+
+
 hr {
     border: none;
     height: 1px;
