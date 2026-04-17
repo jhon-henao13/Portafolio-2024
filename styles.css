@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,500;1,500&display=swap');
 
 
-
 * {
     padding: 0;
     margin: 0;
@@ -10,8 +9,6 @@
     scroll-behavior: smooth !important;
     font-family: "Feather Bold", "sans-serif";
 }
-
-
 
 img {
     width: 100%;
@@ -461,25 +458,27 @@ header .image img:hover {
 @keyframes words {
 
     0%, 20% {
-        content: "Frontend Developer";
+        content: "Full Stack AI Integrator";
     }
 
     21%, 40% {
-        content: "Backend developer";
+        content: "AI Solutions Architect";
     }
 
     41%, 60% {
-        content: "Web Designer";
+        content: "IoT Systems Developer";
     }
 
     61%, 80% {
-        content: "Pentester";
+        content: "Intelligent Automation Engineeer";
     }
 
     81%, 100% {
-        content: "Flutter Developer";
+        content: "Pentester";
     }
 }
+
+
 
 /* Skills Section */
 
