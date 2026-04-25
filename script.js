@@ -1,24 +1,52 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+    // 1. Definimos track al inicio para que todo el código lo reconozca
+    const track = document.getElementById('skillsTrack');
     const filters = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.skill-card');
 
+    // Salir si no existe el track para evitar errores
+    if (!track) return;
+
+    const setupInfiniteScroll = () => {
+        // Obtenemos solo las cartas originales (las que no son clones)
+        const originalCards = Array.from(track.querySelectorAll('.skill-card:not(.clone)'));
+        
+        // Clonamos para el efecto infinito
+        originalCards.forEach(card => {
+            const clone = card.cloneNode(true);
+            clone.classList.add('clone'); 
+            track.appendChild(clone);
+        });
+    };
+
+    // Ejecutamos la clonación
+    setupInfiniteScroll();
+
+    // --- LÓGICA DE FILTROS ---
     filters.forEach(filter => {
         filter.addEventListener('click', () => {
             filters.forEach(btn => btn.classList.remove('active'));
             filter.classList.add('active');
 
             const category = filter.getAttribute('data-filter');
+            
+            // Pausamos animación para que no salte el scroll al ocultar elementos
+            track.style.animation = 'none';
 
-            cards.forEach(card => {
+            const allCards = track.querySelectorAll('.skill-card');
+            
+            allCards.forEach(card => {
+                // Filtramos tanto originales como clones para que el carrusel siga completo
                 if (category === 'all' || card.classList.contains(category)) {
-                    card.classList.remove('hide');
-                    card.classList.add('show');
+                    card.style.display = 'flex';
                 } else {
-                    card.classList.remove('show');
-                    card.classList.add('hide');
+                    card.style.display = 'none';
                 }
             });
+
+            // Reiniciamos animación
+            setTimeout(() => {
+                track.style.animation = 'scroll 40s linear infinite';
+            }, 50);
         });
     });
 

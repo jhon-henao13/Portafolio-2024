@@ -481,7 +481,6 @@ header .image img:hover {
 
 
 /* Skills Section */
-
 .skills {
   padding: 80px 10%;
   background-color: transparent;
@@ -586,22 +585,29 @@ header .image img:hover {
 }
 
 .skill-card {
+  flex: 0 0 140px; /* Ancho fijo */
+  min-height: 100px; /* Ajusta este valor según prefieras la altura */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   text-align: center;
-  padding: 20px 40px;
+  padding: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   cursor: default;
+  margin: 10px 0; /* Espacio para que el hover no se corte */
 }
 
+/* Asegura que las imágenes no deformen la card */
 .skill-card img {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
-  margin-bottom: 12px;
-  transition: transform 0.4s ease;
+  margin-bottom: 15px;
 }
 
 .skill-card p {
@@ -685,10 +691,74 @@ header .image img:hover {
 
 /* Ajuste al grid para que no salte bruscamente */
 .skills-grid {
-  min-height: 400px; /* Evita que el footer suba de golpe al filtrar */
+  min-height: 200px; /* Evita que el footer suba de golpe al filtrar */
   transition: all 0.5s ease;
 }
 
+
+
+
+
+
+.skills-container {
+  overflow: hidden;
+  padding: 40px 0;
+  position: relative;
+  width: 100%;
+  border-radius: 30px;
+}
+
+/* El track que se mueve */
+.skills-track {
+  display: flex;
+  gap: 60px; /* Espacio entre cards */
+  width: max-content;
+  animation: scroll 40s linear infinite;
+  will-change: transform;
+}
+
+/* Pausar al interactuar */
+.skills-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Se mueve hasta la mitad (donde empieza el clon) */
+}
+
+/* Ajuste a las cards para que no se deformen en el flex */
+.skill-card {
+  flex: 0 0 160px; /* Tamaño fijo para el carrusel */
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  /* ... tus otros estilos se mantienen ... */
+}
+
+/* Degradados laterales para efecto "suave" al entrar/salir */
+.skills-container::before,
+.skills-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.skills-container::before {
+  left: -90px;
+  background: linear-gradient(to right, rgb(0 0 0 / 61%), rgb(255 255 255 / 0%));
+  border-radius: 40px;
+}
+
+.skills-container::after {
+  right: -90px;
+  background: linear-gradient(to right, rgb(0 0 0 / 20%), rgba(255, 255, 255, 0));
+  border-radius: 40px;
+}
 
 
 
