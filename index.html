@@ -348,6 +348,89 @@
 
     
       <div class="projects-gallery container">
+
+
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="150"
+             data-title="WeProm Unidad Estratégica" 
+             data-desc="Ecosistema digital principal para marketing y publicidad estratégica. Diseño complejo basado en Figma con alta fidelidad y animaciones fluidas."
+             data-stack="React.js, Tailwind CSS, Framer Motion"
+             data-link="https://weprom-ventura-figma-dising.vercel.app">
+          <div class="card-inner">
+            <div class="card-image">
+              <img src="images/hero-wepromx.png" alt="WeProm MX | Marketing y Publicidad Digital">
+              <div class="card-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; opacity: 0; transition: 0.3s; color: white; cursor: pointer;">
+                  <span><i class="fa-solid fa-plus"></i> Ver Detalles</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>WeProm MX | Marketing y Publicidad Digital</h3>
+              <p>Marketing Digital Estratégico. Desarrollo de alta fidelidad basado en Figma.</p>
+              <div class="tech-tags">
+                <span>React.js</span>
+                <span>Framer Motion</span>
+                <span>Figma</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="50" 
+             data-title="WeProm Promocionales" 
+             data-desc="Plataforma profesional con Dashboard administrativo para la gestión de artículos promocionales en México. Incluye panel de control moderno y transiciones premium."
+             data-stack="React.js, Tailwind CSS, Node.js, Vercel"
+             data-link="https://promocionales.weprom.mx/">
+          <div class="card-inner">
+            <div class="card-image">
+              <img src="images/hero-promocionales.png" alt="WeProm Promocionales">
+              <div class="card-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; opacity: 0; transition: 0.3s; color: white; cursor: pointer;">
+                  <span><i class="fa-solid fa-plus"></i> Ver Detalles</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>WeProm | División de Articulos Promocionales</h3>
+              <p>E-commerce & Dashboard Administrativo. Gestión internacional de artículos promocionales.</p>
+              <div class="tech-tags">
+                <span>React.js</span>
+                <span>Tailwind</span>
+                <span>Node.js</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100"
+             data-title="WeProm Europe" 
+             data-desc="Sitio institucional para el mercado europeo (París). Blog autogestionable con Sanity Studio, arquitectura elegante y optimización de hosting en WPX."
+             data-stack="React.js, Tailwind, Sanity CMS, WPX Net"
+             data-link="https://wepromeurope.com/">
+          <div class="card-inner">
+            <div class="card-image">
+              <img src="images/hero-wepromeurope.png" alt="WeProm Europe">
+              <div class="card-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; opacity: 0; transition: 0.3s; color: white; cursor: pointer;">
+                  <span><i class="fa-solid fa-plus"></i> Ver Detalles</span>
+              </div>
+            </div>
+            <div class="card-content">
+              <h3>WeProm Europe</h3>
+              <p>Corporate Site & CMS Autogestionable para el mercado en París.</p>
+              <div class="tech-tags">
+                <span>React.js</span>
+                <span>Sanity CMS</span>
+                <span>WPX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+
+
+
         <!-- Proyecto 1 -->
         <div class="project-card" data-aos="fade-up" data-aos-delay="100">
           <div class="card-inner">
@@ -676,6 +759,24 @@
     </script>
 
     <script src="script.js"></script>
+
+
+    <div id="project-modal" class="modal" style="display:none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%;    background-color: rgba(0,0,0,0.8); backdrop-filter: blur(5px); align-items: center; justify-content: center;">
+        <div class="modal-content" style="background: #1a1a1a; color: white; padding: 30px; border-radius: 15px; max-width: 500px; width: 90%;    position: relative; border: 1px solid #333;">
+            <span class="close-modal" style="position: absolute; right: 20px; top: 10px; font-size: 28px; cursor: pointer;">&times;</span>
+            <div class="modal-body">
+                <h2 id="modal-title" style="margin-bottom: 15px; color: #00d4ff;"></h2>
+                <p id="modal-description" style="line-height: 1.6; margin-bottom: 20px;"></p>
+                <div class="modal-tech" style="margin-bottom: 25px;">
+                    <strong>Stack:</strong> <span id="modal-stack" style="color: #ccc;"></span>
+                </div>
+                <a href="#" id="modal-link" target="_blank" class="btn" style="display: inline-block; text-decoration: none; background: #00d4ff;     color: black; padding: 10px 20px; border-radius: 5px; font-weight: bold;">Visitar Sitio Web</a>
+            </div>
+        </div>
+    </div>
+
+
+
 
 </body>
 </html>

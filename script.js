@@ -137,4 +137,42 @@ document.addEventListener('DOMContentLoaded', () => {
         detectRetina: true
     });
 
+
+
+
+    // LÓGICA DE MODAL PARA PROYECTOS
+    const modal = document.getElementById("project-modal");
+    const cards = document.querySelectorAll(".project-card");
+    const closeBtn = document.querySelector(".close-modal");
+    
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            // Extraer datos de la card
+            const title = card.getAttribute("data-title");
+            const desc = card.getAttribute("data-desc");
+            const stack = card.getAttribute("data-stack");
+            const link = card.getAttribute("data-link");
+    
+            // Inyectar en el modal
+            document.getElementById("modal-title").innerText = title;
+            document.getElementById("modal-description").innerText = desc;
+            document.getElementById("modal-stack").innerText = stack;
+            document.getElementById("modal-link").href = link;
+    
+            // Mostrar modal
+            modal.style.display = "flex";
+        });
+    });
+    
+    // Cerrar al click en X o fuera del modal
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = (event) => {
+        if (event.target == modal) modal.style.display = "none";
+    };
+
+
+
+
+
+
 });
